@@ -1,4 +1,4 @@
-# 1. Functional Requirement
+## 1. Functional Requirement
 
 Functional requirement is **what the system should do**.
 
@@ -20,9 +20,9 @@ Non-functional requirements describe **how well the system should perform**.
 
 They define the **quality attributes of the system design rather than its features**.
 
-### Common Non-Functional Requirements
+#### Common Non-Functional Requirements
 
-## 1. Scalability
+#### 1. Scalability
 
 Ability to handle increasing users, requests, and data without major performance degradation.
 
@@ -30,22 +30,22 @@ Ability to handle increasing users, requests, and data without major performance
 
 Supports **1 million users → 100 million users**
 
-## 2. Availability
+#### 2. Availability
 
 Percentage of time the system remains operational or accessible.
 
-## 3. Reliability
+#### 3. Reliability
 
 The system consistently performs the correct operation without losing or corrupting data.
 
-## 4. Performance
+#### 4. Performance
 
 How quickly the system responds to user requests.
 
-## 5. Security
+#### 5. Security
 
 Protecting the system and user data from unauthorized access, attacks, and data breaches.
 
-## 6. Fault Tolerance
+#### 6. Fault Tolerance
 
 Ability to continue functioning even if some components fail.
