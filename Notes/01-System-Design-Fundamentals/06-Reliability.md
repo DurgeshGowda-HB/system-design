@@ -5,19 +5,13 @@ Reliability is one of the most important **Non-Functional Requirements** in Syst
 
 It tells us whether a system **consistently produces the correct result**, even when failures occur.
 
----
-
 <h2>Why Do We Need Reliability?</h2>
 
 Suppose you transfer **₹10,000** to your friend using Google Pay.
 
 You click **Send**.
 
-The app says:
-
-```text
-Payment Successful ✅
-```
+The app says : Payment Successful 
 
 But...
 
@@ -25,12 +19,9 @@ But...
 - The money is deducted twice.
 
 Would you trust that app again?
-
-❌ No.
+ No.
 
 The app was **available** (it opened and accepted your request), but it was **not reliable** because it produced the wrong result.
-
----
 
 <h2>Definition</h2>
 
@@ -42,63 +33,45 @@ Simply:
 
 ---
 
-<h2>Real-Life Analogy</h2>
+-> Real-Life Analogy
 
 Imagine a calculator.
 
 You type:
-
-```text
 2 + 2
-```
 
-It returns:
 
-```text
-4
-```
+It returns:4
 
 Perfect.
 
 Now imagine sometimes it returns:
 
-```text
 5
-```
 
 The calculator is working (available), but you can't trust it.
 
 It is **not reliable**.
-
----
 
 <h2>Software Example</h2>
 
 Imagine WhatsApp.
 
 You send:
-
-```text
 Hello
-```
 
 Expected:
-
-```text
 Receiver gets "Hello"
-```
 
 Instead:
 
-- Message disappears ❌
-- Delivered twice ❌
-- Corrupted ❌
+- Message disappears 
+- Delivered twice 
+- Corrupted 
 
 WhatsApp is running, but the feature isn't behaving correctly.
 
 That's a **reliability problem**.
-
----
 
 <h2>Availability vs Reliability</h2>
 
@@ -111,9 +84,8 @@ This is one of the favorite interview questions.
 | "Can I use it?" | "Can I trust it?" |
 | Measured by uptime % | Measured by correct operation, error rates, data integrity |
 
----
 
-<h2>Examples</h2>
+<h2>-> Examples</h2>
 
 ### Gmail
 
@@ -125,21 +97,13 @@ You can open Inbox.
 
 Everything works.
 
-**Availability**
-
-✅ High
+**Availability** : High
 
 Now imagine every email disappears after **5 minutes**.
 
-Availability?
+Availability? :  Yes
 
-✅ Yes
-
-Reliability?
-
-❌ No
-
----
+Reliability? : No
 
 ### Amazon
 
@@ -151,31 +115,10 @@ You can buy.
 
 But every payment is charged twice.
 
-Availability?
+Availability? : Yes
 
-✅ Yes
+Reliability? :  No
 
-Reliability?
-
-❌ No
-
----
-
-### Hospital Software
-
-Doctors can open the application.
-
-But patient records show incorrect information.
-
-Availability?
-
-✅ High
-
-Reliability?
-
-❌ Extremely poor
-
----
 
 <h2>Why Reliability Matters</h2>
 
@@ -189,31 +132,17 @@ If **₹1000 becomes ₹10,000** by mistake...
 
 Huge problem.
 
----
-
 ### Hospital
 
 Wrong patient report...
 
 Can risk lives.
 
----
-
-### Airline
-
-Wrong passenger list...
-
-Major operational issue.
-
----
-
 ### Stock Market
 
 Wrong share price...
 
 Can cause massive financial losses.
-
----
 
 <h2>Characteristics of a Reliable System</h2>
 
@@ -225,7 +154,6 @@ A reliable system should:
 - ✅ Recover from failures
 - ✅ Be consistent
 
----
 
 <h2>Causes of Poor Reliability</h2>
 
@@ -247,13 +175,10 @@ Instead of:
 balance = balance + amount;
 ```
 
----
 
 ### 2. Database Failure
 
 Data gets corrupted.
-
----
 
 ### 3. Network Failure
 
@@ -265,23 +190,17 @@ The client retries.
 
 Payment gets processed twice.
 
----
-
 ### 4. Hardware Failure
 
 Disk crashes.
 
 Data lost.
 
----
-
 ### 5. Human Error
 
 - Wrong deployment
 - Wrong configuration
 - Accidental database deletion
-
----
 
 <h2>How Do Companies Improve Reliability?</h2>
 
@@ -305,7 +224,7 @@ If one fails,
 
 others still have the data.
 
----
+
 
 ### 2. Backups
 
@@ -317,7 +236,6 @@ If something is deleted,
 
 restore it.
 
----
 
 ### 3. Testing
 
@@ -327,8 +245,6 @@ restore it.
 - Regression Testing
 
 Catch bugs before production.
-
----
 
 ### 4. Monitoring
 
@@ -342,15 +258,12 @@ CPU reaches 100%
 
 Alert the engineering team.
 
----
 
 ### 5. Retry Mechanisms
 
 If a network request fails,
 
 retry safely.
-
----
 
 ### 6. Idempotency
 
@@ -380,7 +293,6 @@ Duplicate request ignored
 
 > We'll study **Idempotency** in detail later.
 
----
 
 <h2>Real Company Examples</h2>
 
@@ -394,15 +306,6 @@ others continue.
 
 ---
 
-### Amazon
-
-Orders are stored in multiple systems.
-
-Backups exist.
-
-Transactions are protected.
-
----
 
 ### Netflix
 
@@ -428,15 +331,10 @@ But...
 
 The server is down for **two hours**.
 
-Reliability?
+Reliability? : High
 
-✅ High
+Availability? : Low
 
-Availability?
-
-❌ Low
-
----
 
 <h2>Can a System Be Available but Not Reliable?</h2>
 
@@ -452,104 +350,10 @@ Messages disappear.
 
 Wrong results.
 
-Availability?
+Availability? : High
 
-✅ High
+Reliability? : Low
 
-Reliability?
-
-❌ Low
-
----
-
-<h2>Memory Trick</h2>
-
-Imagine a restaurant.
-
-**Availability**
-
-> Restaurant is open.
-
-You can enter.
-
-**Reliability**
-
-> Did you receive the correct food?
-
-Ordered:
-
-```text
-Pizza
-```
-
-Received:
-
-```text
-Pizza
-```
-
-Reliable.
-
-Received:
-
-```text
-Burger
-```
-
-Not reliable.
-
----
-
-<h2>Interview Questions</h2>
-
-### Q1. What is Reliability?
-
-**Answer:**
-
-Reliability is the ability of a system to consistently produce correct results, even when failures occur.
-
----
-
-### Q2. What is the difference between Availability and Reliability?
-
-| Availability | Reliability |
-|--------------|-------------|
-| Is the service accessible? | Are the results correct? |
-| Focuses on uptime | Focuses on correctness |
-| Can I use it? | Can I trust it? |
-
----
-
-### Q3. Can a system be reliable but not available?
-
-✅ Yes.
-
-Example:
-
-A payment system always processes transactions correctly but is down for two hours.
-
----
-
-### Q4. Can a system be available but not reliable?
-
-✅ Yes.
-
-Example:
-
-A website is online, but payments are processed incorrectly.
-
----
-
-### Q5. How can companies improve reliability?
-
-- Replication
-- Backups
-- Testing
-- Monitoring
-- Retry Mechanisms
-- Idempotency
-
----
 
 <h2>Key Takeaways</h2>
 
