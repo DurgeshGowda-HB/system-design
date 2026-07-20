@@ -21,8 +21,7 @@ There are two common approaches:
 
 - Monolithic Architecture
 - Microservices Architecture
-
-(../../images/Monilithic-&-Microservice.png)
+<img src="/images/Monilithic-and-Microservice.png" alt="Monolithic Architecture Diagram" width="80%" height="400">
 
 <h2> -> 1. Monolithic Architecture</h2>
 
