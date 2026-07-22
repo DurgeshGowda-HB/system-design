@@ -201,9 +201,7 @@ People often ask:
 
 > If HTTPS encrypts data, who performs the encryption?
 
-The answer is:
-
-**TLS (Transport Layer Security)**
+The answer is : **TLS (Transport Layer Security)**
 
 (Older name: **SSL**)
 
@@ -215,7 +213,6 @@ TLS:
 
 You don't need to know the cryptography for most entry-level interviews.
 
-
 <h3>HTTP vs HTTPS</h3>
 
 | HTTP | HTTPS |
@@ -225,8 +222,7 @@ You don't need to know the cryptography for most entry-level interviews.
 | Uses Port 80 | Uses Port 443 |
 | Suitable only for non-sensitive traffic | Used for almost all modern websites |
 
-
-<h2>Why HTTPS Matters in System Design?</h2>
+<h3>Why HTTPS Matters in System Design?</h3>
 
 Imagine a banking application.
 
@@ -249,133 +245,7 @@ Encrypted Password
         │
 Only Bank Server Can Decrypt
 ```
-
 That's why every production application uses **HTTPS**.
-
----
-
-<h2>Real-World Examples</h2>
-
-### Amazon
-
-Uses HTTPS for:
-
-- Customer Login
-- Payments
-- Orders
-
----
-
-### Google
-
-Uses HTTPS for:
-
-- Search
-- Gmail
-- Google Drive
-
----
-
-### Netflix
-
-Uses HTTPS for:
-
-- Login
-- Streaming Requests
-- User Profile
-
-All communication is protected.
-
----
-
-<h2>Interview Questions</h2>
-
-### Q1. What is HTTP?
-
-**Answer:**
-
-HTTP is a protocol used for communication between clients and servers.
-
----
-
-### Q2. What is Statelessness?
-
-**Answer:**
-
-Each request is independent, and the server doesn't automatically remember previous requests.
-
----
-
-### Q3. Why is Statelessness useful?
-
-**Answer:**
-
-It makes applications easier to scale because **any server can process any request**.
-
----
-
-### Q4. Difference between HTTP and HTTPS?
-
-| HTTP | HTTPS |
-|------|-------|
-| Plain Text Communication | Encrypted Communication |
-| Less Secure | Secure |
-| Uses Port 80 | Uses Port 443 |
-| No TLS | Uses TLS |
-
----
-
-### Q5. Why do modern websites use HTTPS?
-
-**Answer:**
-
-To protect sensitive information such as:
-
-- Passwords
-- Payment Details
-- Personal Data
-
-from interception or tampering.
-
----
-
-<h2>Quick Revision</h2>
-
-```text
-HTTP
-   │
-Communication between Client & Server
-   │
-Request → Response
-   │
-Stateless
-   │
-Easy to Scale
-   │
-HTTPS
-   │
-Encrypted Communication
-   │
-Uses TLS
-   │
-Secure
-```
-
----
-
-<h2>Memory Trick</h2>
-
-Think of sending a letter.
-
-> **HTTP = Sending an open postcard.**
-
-Anyone who sees it can read the message.
-
-> **HTTPS = Sending a sealed envelope.**
-
-Only the intended receiver can open and read it.
-
----
 
 <h2>Key Takeaways</h2>
 
